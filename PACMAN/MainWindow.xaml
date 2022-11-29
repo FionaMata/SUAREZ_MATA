@@ -7,6 +7,67 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <!--<StatusBar DockPanel.Dock="Top">
+                <StatusBarItem>
+                    <Button>Inici</Button>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Button x:Name="btnPause" Click="btnPause_Click">Pausa</Button>
+                </StatusBarItem>
+                <StatusBarItem>
+                    <Button>Sortir</Button>
+                </StatusBarItem>
+                <StatusBarItem HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <StatusBarItem HorizontalAlignment="Right">Vides:</StatusBarItem>
+                        <StatusBarItem x:Name="sbiVides" HorizontalAlignment="Right"></StatusBarItem>
+                        -->
+        <!---Aquí podem afegir un command per saber quantes vides té, i en unció d'aquest valor
+                             mostrar els cors d'un color o un altre-->
+        <!--
+                    </StackPanel>
+                </StatusBarItem>
+                <StatusBarItem HorizontalAlignment="Right">
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                        <StatusBarItem HorizontalAlignment="Right">Temps:</StatusBarItem>
+                        <StatusBarItem x:Name="sbiTemps" HorizontalAlignment="Right">00:00:00</StatusBarItem>
+                    </StackPanel>
+                </StatusBarItem>
+            </StatusBar>-->
 
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+        </Grid>
+
+        <Canvas x:Name="Canvas" 
+                    Background="Black"
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.RowSpan="2">
+
+            <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="15" x:Name="spVides" VerticalAlignment="Top">
+                <StatusBarItem HorizontalAlignment="Right" Foreground="White">
+                    <Image Source="/Imatges/hp.png" Width="32"/>
+                </StatusBarItem>
+                <StatusBarItem HorizontalAlignment="Right" Foreground="White">
+                    <Image Source="/Imatges/hp.png" Width="32"/>
+                </StatusBarItem>
+                <StatusBarItem HorizontalAlignment="Right" Foreground="White">
+                    <Image Source="/Imatges/hp.png" Width="32"/>
+                </StatusBarItem>
+            </StackPanel>
+        </Canvas>
     </Grid>
 </Window>
